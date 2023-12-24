@@ -28,29 +28,36 @@
 
 <body class="light-theme">
 
-
-
-    <div style="display: flex; flex-direction: column; align-items: center; width: 100vw; justify-content: space-around; height: 100vh;">
-        <img style="height: 15rem; width: 15rem; border-radius: 100rem;object-fit: cover;" src="tine.jpg" />
-        <div class="tick" data-did-init="handleTickInit">
-            <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
-                <div class="tick-group">
-                    <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
-                        <span data-view="flip"></span>
-                    </div>
-                    <span data-key="label" data-view="text" class="tick-label"></span>
+        
+    <img style="height: 15rem; width: 15rem; border-radius: 100rem;object-fit: cover;" src="tine.jpg" />
+    
+    <div class="tick" data-did-init="handleTickInit">
+        <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+            <div class="tick-group">
+                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                    <span data-view="flip"></span>
                 </div>
+                <span data-key="label" data-view="text" class="tick-label"></span>
             </div>
         </div>
-        <h2>Zonder Zalando aankopen</h2>
     </div>
+    
+    <h2>Zalan<strong style="color: #ff6900">don't</strong></h2>
 
     <style>
+        html {
+            height: 100vh;
+        }
         body {
             font-family: HelveticaNow, Helvetica,sans-serif;
             background-color: rgba(0,0,0, 0.9);
             color: rgba(255,255,255, 0.9);
             overflow: hidden !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
         }
 
         body.light-theme {
@@ -59,7 +66,7 @@
         }
 
         .tick {
-          font-size:1rem;
+          font-size: 2vi;
           white-space:nowrap;
         }
         
